@@ -27,8 +27,8 @@ from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 from telethon import __version__ as tlhver
 
-import RadiuxManager.modules.sql.users_sql as sql
-from RadiuxManager import (
+import MukeshRobot.modules.no_sql.users_db as sql
+from MukeshRobot import (
     BOT_NAME,
     BOT_USERNAME,
     LOGGER,
