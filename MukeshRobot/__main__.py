@@ -42,9 +42,9 @@ from RadiuxManager import (
     telethn,
     updater,
 )
-from RadiuxManager.modules import ALL_MODULES
-from RadiuxManager.modules.helper_funcs.chat_status import is_user_admin
-from RadiuxManager.modules.helper_funcs.misc import paginate_modules
+from MukeshRobot.modules import ALL_MODULES
+from MukeshRobot.modules.helper_funcs.chat_status import is_user_admin
+from MukeshRobot.modules.helper_funcs.misc import paginate_modules
 
 
 def get_readable_time(seconds: int) -> str:
@@ -133,7 +133,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("RadiuxManager.modules." + module_name)
+    imported_module = importlib.import_module("MukeshRobot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
