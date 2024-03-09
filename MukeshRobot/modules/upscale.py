@@ -1,9 +1,8 @@
 import base64
 import httpx
-import os
-import config 
-from config import BOT_USERNAME
-from MukeshRobot import app
+import os 
+from MukeshRobot import BOT_USERNAME
+from MukeshRobot import pbot
 from pyrogram import Client, filters
 import pyrogram
 from uuid import uuid4
