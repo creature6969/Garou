@@ -1,6 +1,6 @@
 import base64
 import httpx
-import os 
+import os
 from MukeshRobot import BOT_USERNAME
 from MukeshRobot import pbot
 from pyrogram import Client, filters
@@ -27,7 +27,7 @@ async def image_loader(image: str, link: str):
 async def upscale_image(client, message):
     chat_id = message.chat.id
     replied = message.reply_to_message
-    if not config.DEEP_API:
+    if not MukeshRobot.DEEP_API:
         return await message.reply_text("I can't upscale !")
     if not replied:
         return await message.reply_text("Please Reply To An Image ...")
