@@ -97,7 +97,7 @@ buttons = [
     ], 
     [ 
         InlineKeyboardButton(text=" 👾ʜᴇʟᴘ👾 ", callback_data="help_back"), 
-        InlineKeyboardButton(text=" 🎵 Mᴜsɪᴄ 🎵 ", callback_data="Music_"), 
+        InlineKeyboardButton(text=" 🎵 Mᴜsɪᴄ 🎵 ", callback_data="no_back"), 
     ], 
     [ 
         InlineKeyboardButton(text=" 🍁sᴜᴘᴘᴏʀᴛ🍁 ", url=f"https://t.me/garou_support_chat"), 
@@ -115,7 +115,7 @@ buttons = [
 ] 
 
 HELP_STRINGS = f"""
-» {BOT_NAME}  ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ᴀʙᴏᴜᴛ sᴘᴇᴄɪғɪᴄs ᴄᴏᴍᴍᴀɴᴅ"""[ ]("https://telegra.ph/file/1284a9b98d9e1b39f8333.jpg")
+» {BOT_NAME}  ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ᴀʙᴏᴜᴛ sᴘᴇᴄɪғɪᴄs ᴄᴏᴍᴍᴀɴᴅ"""
 
 DONATE_STRING = """ʜᴇʏ ʙᴀʙʏ,
   ʜᴀᴩᴩʏ ᴛᴏ ʜᴇᴀʀ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴɴᴀ ᴅᴏɴᴀᴛᴇ.
