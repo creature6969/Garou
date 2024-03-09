@@ -3,7 +3,7 @@ import httpx
 import os
 import config 
 from config import BOT_USERNAME
-from EQUROBOT import app
+from MukeshRobot import app
 from pyrogram import Client, filters
 import pyrogram
 from uuid import uuid4
