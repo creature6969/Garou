@@ -8,10 +8,10 @@ from pyrogram import filters
 
 #BOT FILE IMPORTS
 #Name -> Your Bots File Name (Eg. From Liaa import pbot as app)
-from Name import pbot as app
+from MukeshRobot import pbot 
 
 
-@app.on_message(filters.command("upscale"))
+@pbot.on_message(filters.command("upscale"))
 async def upscale_image(client, message):
     try:
         # Check if the replied message contains a photo
