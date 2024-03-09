@@ -41,7 +41,7 @@ async def gay(e):
     await e.reply(GAY, buttons=BUTTON, file=GAYX)
 
 
-@asst.on(events.NewMessage(pattern="/lezbian ?(.*)"))
+@asst.on(events.NewMessage(pattern="/lesbian ?(.*)"))
 async def lezbian(e):
     user_id = e.sender.id
     user_name = e.sender.first_name
