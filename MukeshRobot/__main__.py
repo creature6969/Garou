@@ -1120,7 +1120,7 @@ def main():
         Music_about_callback, pattern=r"Music_"
     )
     WAIFU_callback_handler = CallbackQueryHandler(
-        Iconic_about_callback, pattern=r"WAIFU_"
+        WAIFU_about_callback, pattern=r"WAIFU_"
     )
 
     donate_handler = CommandHandler("donate", donate)
