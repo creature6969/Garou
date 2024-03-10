@@ -1121,6 +1121,7 @@ def main():
     )
     WAIFU_callback_handler = CallbackQueryHandler(
         Iconic_about_callback, pattern=r"WAIFU_"
+    )
 
     donate_handler = CommandHandler("donate", donate)
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
