@@ -113,7 +113,7 @@ buttons = [
  
  
     [ 
-        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ ", callback_data="Radiux_"), 
+        InlineKeyboardButton(text=" 🪙 ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ɢᴀʀᴏᴜ ガロウ 🪙 ", callback_data="Radiux_"), 
     ], 
 ] 
 
@@ -388,17 +388,17 @@ def WAIFU_about_callback(update: Update, context: CallbackContext):
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
             text=f"""
-            Help Section:
+            ʜᴇʟᴘ sᴇᴄᴛɪᴏɴ ғᴏʀ ᴡᴀɪғᴜ & ʜᴜsʙᴀɴᴅᴏ
     
-/guess: To Guess character (only works in group)
-/fav: Add Your fav
-/trade : To trade Characters
-/gift: Give any Character from Your Collection to another user.. (only works in groups)
-/collection: To see Your Collection
-/topgroups : See Top Groups.. Ppl Guesses Most in that Groups
-/top: Too See Top Users
-/ctop : Your ChatTop
-/changetime: Change Character appear time (only works in Groups)
+/guess: Tᴏ Gᴜᴇss ᴄʜᴀʀᴀᴄᴛᴇʀ (ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘ)
+/fav: Aᴅᴅ Yᴏᴜʀ ғᴀᴠ
+/trade : Tᴏ ᴛʀᴀᴅᴇ Cʜᴀʀᴀᴄᴛᴇʀs
+/gift: Gɪᴠᴇ ᴀɴʏ Cʜᴀʀᴀᴄᴛᴇʀ ғʀᴏᴍ Yᴏᴜʀ Cᴏʟʟᴇᴄᴛɪᴏɴ ᴛᴏ ᴀɴᴏᴛʜᴇʀ ᴜsᴇʀ.. (ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs)
+/collection: Tᴏ sᴇᴇ Yᴏᴜʀ Cᴏʟʟᴇᴄᴛɪᴏɴ
+/topgroups : Sᴇᴇ Tᴏᴘ Gʀᴏᴜᴘs.. Pᴘʟ Gᴜᴇssᴇs Mᴏsᴛ ɪɴ ᴛʜᴀᴛ Gʀᴏᴜᴘs
+/top: Tᴏᴏ Sᴇᴇ Tᴏᴘ Usᴇʀs
+/ctop : Yᴏᴜʀ CʜᴀᴛTᴏᴘ
+/changetime: Cʜᴀɴɢᴇ Cʜᴀʀᴀᴄᴛᴇʀ ᴀᴘᴘᴇᴀʀ ᴛɪᴍᴇ (ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ Gʀᴏᴜᴘs)
  
 Oᴜᴛ ᴏғ ᴍᴀɴʏ ғᴇᴀᴛᴜʀᴇs, ᴛʜɪs ʙᴏᴛ ɪs ʙᴀsᴇᴅ ᴏɴ ᴛʜᴇ ɪᴍᴀɢɪɴᴀʀʏ.  
           """  , 
