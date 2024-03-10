@@ -97,7 +97,7 @@ buttons = [
     ], 
     [ 
         InlineKeyboardButton(text=" 👾ʜᴇʟᴘ👾 ", callback_data="help_back"), 
-        InlineKeyboardButton(text=" 🎵 Mᴜsɪᴄ 🎵 ", callback_data="no_back"), 
+        InlineKeyboardButton(text=" 🎵 Mᴜsɪᴄ 🎵 ", callback_data="Music_"), 
     ], 
     [ 
         InlineKeyboardButton(text=" 🍁sᴜᴘᴘᴏʀᴛ🍁 ", url=f"https://t.me/garou_support_chat"), 
