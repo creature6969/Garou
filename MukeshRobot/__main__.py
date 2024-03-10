@@ -99,6 +99,9 @@ buttons = [
         InlineKeyboardButton(text=" 👾ʜᴇʟᴘ👾 ", callback_data="help_back"), 
         InlineKeyboardButton(text=" 🎵 Mᴜsɪᴄ 🎵 ", callback_data="Music_"), 
     ], 
+    [   
+        InlineKeyboardButton(text=" 🌊 ᴡᴀɪғᴜ/ʜᴜsʙᴀɴᴅᴏ 🌊 ", callback_data="WAIFU_"), 
+    ],
     [ 
         InlineKeyboardButton(text=" 🍁sᴜᴘᴘᴏʀᴛ🍁 ", url=f"https://t.me/garou_support_chat"), 
         InlineKeyboardButton(text=" 🍁ᴜᴘᴅᴀᴛᴇs🍁 ", url=f"https://t.me/garou_updates"), 
@@ -378,7 +381,47 @@ def help_button(update, context):
         pass
 
             
+run_async
+def WAIFU_about_callback(update: Update, context: CallbackContext):
+    query = update.callback_query
+    if query.data == "WAIFU_":
+        uptime = get_readable_time((time.time() - StartTime))
+        query.message.edit_text(
+            text=f"""
+            Help Section:
     
+/guess: To Guess character (only works in group)
+/fav: Add Your fav
+/trade : To trade Characters
+/gift: Give any Character from Your Collection to another user.. (only works in groups)
+/collection: To see Your Collection
+/topgroups : See Top Groups.. Ppl Guesses Most in that Groups
+/top: Too See Top Users
+/ctop : Your ChatTop
+/changetime: Change Character appear time (only works in Groups)
+ 
+Oᴜᴛ ᴏғ ᴍᴀɴʏ ғᴇᴀᴛᴜʀᴇs, ᴛʜɪs ʙᴏᴛ ɪs ʙᴀsᴇᴅ ᴏɴ ᴛʜᴇ ɪᴍᴀɢɪɴᴀʀʏ.  
+          """  , 
+            parse_mode=ParseMode.MARKDOWN, 
+            disable_web_page_preview=True, 
+            reply_markup=InlineKeyboardMarkup( 
+                [ 
+                    [
+                        InlineKeyboardButton(text="𝐁𝙰𝙲𝙺", callback_data="Radiux_back"),
+                    ],
+                ]
+            ),
+        )
+    elif query.data == "Radiux_back":
+        first_name = update.effective_user.first_name 
+        query.message.edit_text(
+            PM_START_TEXT.format(escape_markdown(first_name), (START_IMG), BOT_NAME),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            disable_web_page_preview=False,
+        )
+
 run_async
 def Iconic_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
