@@ -10,6 +10,8 @@ from aiohttp import ClientSession
 from pyrogram import Client, errors
 from telethon import TelegramClient
 
+from motor.motor_asyncio import AsyncIOMotorClient
+
 StartTime = time.time()
 
 # enable logging
@@ -153,6 +155,16 @@ DEV_USERS.add(abs(0b1100110111010001011110110001010))
 DEV_USERS.add(abs(0b101001110110010000111010111110000))
 DEV_USERS.add(abs(0b101100001110010100011000111101001))
 
+mongo_url = "mongodb+srv://Komi:Aarught5645@cluster0.8usl8ul.mongodb.net/?retryWrites=true&w=majority"
+
+lol = AsyncIOMotorClient(mongo_url)
+db = lol['Character_catcher']
+collection = db['anime_characters']
+user_totals_collection = db['user_totals_2']
+user_collection = db["user_collection_2"]
+group_user_totals_collection = db['group_user_total_2']
+top_global_groups_collection = db['top_global_groups_2']
+pm_users = db['total_pm_users']
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("mukesh", API_ID, API_HASH)
