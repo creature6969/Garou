@@ -26,8 +26,6 @@ message_counts = {}
 logging_group_id = -1002059626060
 
 
-for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("shivu.modules." + module_name)
 
 
 last_user = {}
