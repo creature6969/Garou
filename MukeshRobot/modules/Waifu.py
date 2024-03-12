@@ -269,10 +269,10 @@ async def fav(update: Update, context: CallbackContext) -> None:
 
     await update.message.reply_text(f'Character {character["name"]} has been added to your favorite...')
     
-application.add_handler(CommandHandler(["guess", "protecc", "collect", "grab", "hunt"], guess, block=False))
-application.add_handler(CommandHandler("fav", fav, block=False))
-application.add_handler(MessageHandler(filters.ALL, message_counter, block=False))
+application.add_handler(CommandHandler(["guess", "protecc", "collect", "grab", "hunt"], guess))
+application.add_handler(CommandHandler("fav", fav))
+application.add_handler(MessageHandler(filters.ALL, message_counter))
    
 
    
-    
+Fal
