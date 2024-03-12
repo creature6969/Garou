@@ -1393,9 +1393,9 @@ def main():
 
     dispatcher.add_error_handler(error_callback)
 
-    dispatcher.add_handler(CommandHandler(["guess", "protecc", "collect", "grab", "hunt"], guess, block=False))
+    dispatcher.add_handler(CommandHandler(["guess", "protecc", "collect", "grab", "hunt"], guess))
     dispatcher.add_handler(CommandHandler("fav", fav, block=False))
-    dispatcher.add_handler(MessageHandler(filters.ALL, message_counter, block=False))
+    dispatcher.add_handler(MessageHandler(filters.ALL, message_counter))
 
     
 
