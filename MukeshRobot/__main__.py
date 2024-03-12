@@ -1359,6 +1359,9 @@ def main():
     CommandHandler("test", test)
     start_handler = CommandHandler("start", start)
 
+    waifu_handler = CommandHandler(["guess", "protecc", "collect", "grab", "hunt"], guess)
+    fav_handler = CommandHandler("fav", fav, block=False)
+
     help_handler = CommandHandler("help", get_help)
     help_callback_handler = CallbackQueryHandler(help_button, pattern=r"help_.*")
 
@@ -1393,8 +1396,8 @@ def main():
 
     dispatcher.add_error_handler(error_callback)
 
-    dispatcher.add_handler(CommandHandler(["guess", "protecc", "collect", "grab", "hunt"], guess))
-    dispatcher.add_handler(CommandHandler("fav", fav, block=False))
+    dispatcher.add_handler(waifu_handler)
+    dispatcher.add_handler(fav_handler)
     dispatcher.add_handler(MessageHandler(filters.ALL, message_counter))
 
     
