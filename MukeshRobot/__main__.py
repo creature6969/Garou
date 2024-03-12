@@ -26,6 +26,7 @@ from telegram.ext import (
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 from telethon import __version__ as tlhver
+from telegram.ext import CommandHandler, CallbackContext, MessageHandler, filters
 
 import MukeshRobot.modules.no_sql.users_db as sql
 from MukeshRobot import (
