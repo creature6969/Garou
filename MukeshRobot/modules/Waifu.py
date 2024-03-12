@@ -10,7 +10,7 @@ from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 from telegram import Update
 from telegram.ext import CommandHandler, CallbackContext, MessageHandler, filters
 
-from MukeshRobot import collection, top_global_groups_collection, group_user_totals_collection, user_collection, user_totals_collection, tbot
+from MukeshRobot import collection, top_global_groups_collection, group_user_totals_collection, user_collection, user_totals_collection
 from MukeshRobot import dispatcher, SUPPORT_CHAT, db, LOGGER
 
 application = dispatcher
