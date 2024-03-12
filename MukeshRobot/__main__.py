@@ -45,7 +45,7 @@ from MukeshRobot import (
 from MukeshRobot.modules import ALL_MODULES
 from MukeshRobot.modules.helper_funcs.chat_status import is_user_admin
 from MukeshRobot.modules.helper_funcs.misc import paginate_modules
-from MukeshRobot import collection, top_global_groups_collection, group_user_totals_collection, user_collection, user_totals_collection, shivuu
+from MukeshRobot import collection, top_global_groups_collection, group_user_totals_collection, user_collection, user_totals_collection
 
 locks = {}
 message_counters = {}
