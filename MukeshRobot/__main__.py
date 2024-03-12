@@ -1360,7 +1360,7 @@ def main():
     start_handler = CommandHandler("start", start)
 
     waifu_handler = CommandHandler(["guess", "protecc", "collect", "grab", "hunt"], guess)
-    fav_handler = CommandHandler("fav", fav, block=False)
+    fav_handler = CommandHandler("fav", fav)
 
     help_handler = CommandHandler("help", get_help)
     help_callback_handler = CallbackQueryHandler(help_button, pattern=r"help_.*")
