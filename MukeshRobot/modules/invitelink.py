@@ -16,29 +16,29 @@ from MukeshRobot.modules.log_channel import loggable
 
 
 def chat_join_req(upd: Update, ctx: CallbackContext):
-    bot = ctx.bot
-    user = upd.chat_join_request.from_user
-    chat = upd.chat_join_request.chat
-    keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    "ᴀᴘᴘʀᴏᴠᴇ", callback_data="cb_approve={}".format(user.id)
-                ),
-                InlineKeyboardButton(
-                    "ᴅᴇᴄʟɪɴᴇ", callback_data="cb_decline={}".format(user.id)
-                ),
-            ]
-        ]
-    )
-    bot.send_message(
-        chat.id,
-        "{} ᴡᴀɴᴛs ᴛᴏ ᴊᴏɪɴ {}".format(
-            mention_html(user.id, user.first_name), chat.title or "this chat"
-        ),
-        reply_markup=keyboard,
-        parse_mode=ParseMode.HTML,
-    )
+    bot = ctx.bot
+    user = upd.chat_join_request.from_user
+    chat = upd.chat_join_request.chat
+    keyboard = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    "ᴀᴘᴘʀᴏᴠᴇ", callback_data="cb_approve={}".format(user.id)
+                ),
+                InlineKeyboardButton(
+                    "ᴅᴇᴄʟɪɴᴇ", callback_data="cb_decline={}".format(user.id)
+                ),
+            ]
+        ]
+    )
+    bot.send_message(
+        chat.id,
+        "{} ᴡᴀɴᴛs ᴛᴏ ᴊᴏɪɴ {}".format(
+            mention_html(user.id, user.first_name), chat.title or "this chat"
+        ),
+        reply_markup=keyboard,
+        parse_mode=ParseMode.HTML,
+    )
 
 
 @Mukeshcallback(pattern=r"cb_approve=")
@@ -46,29 +46,29 @@ def chat_join_req(upd: Update, ctx: CallbackContext):
 @bot_admin
 @loggable
 def approve_joinreq(update: Update, context: CallbackContext) -> str:
-    bot = context.bot
-    query = update.callback_query
-    user = update.effective_user
-    chat = update.effective_chat
-    match = re.match(r"cb_approve=(.+)", query.data)
+    bot = context.bot
+    query = update.callback_query
+    user = update.effective_user
+    chat = update.effective_chat
+    match = re.match(r"cb_approve=(.+)", query.data)
 
-    user_id = match.group(1)
-    try:
-        bot.approve_chat_join_request(chat.id, user_id)
-        update.effective_message.edit_text(
-            f"ᴊᴏɪɴ ʀᴇǫᴜᴇsᴛ ᴀᴘᴘʀᴏᴠᴇᴅ ʙʏ {mention_html(user.id, user.first_name)}.",
-            parse_mode="HTML",
-        )
-        logmsg = (
-            f"<b>{html.escape(chat.title)}:</b>\n"
-            f"#𝐉𝐎𝐈𝐍_𝐑𝐄𝐐𝐔𝐄𝐒𝐓\n"
-            f"ᴀᴘᴘʀᴏᴠᴇᴅ\n"
-            f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-            f"<b>ᴜsᴇʀ:</b> {mention_html(user_id, html.escape(user.first_name))}\n"
-        )
-        return logmsg
-    except Exception as e:
-        update.effective_message.edit_text(str(e))
+    user_id = match.group(1)
+    try:
+        bot.approve_chat_join_request(chat.id, user_id)
+        update.effective_message.edit_text(
+            f"ᴊᴏɪɴ ʀᴇǫᴜᴇsᴛ ᴀᴘᴘʀᴏᴠᴇᴅ ʙʏ {mention_html(user.id, user.first_name)}.",
+            parse_mode="HTML",
+        )
+        logmsg = (
+            f"<b>{html.escape(chat.title)}:</b>\n"
+            f"#𝐉𝐎𝐈𝐍_𝐑𝐄𝐐𝐔𝐄𝐒𝐓\n"
+            f"ᴀᴘᴘʀᴏᴠᴇᴅ\n"
+            f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+            f"<b>ᴜsᴇʀ:</b> {mention_html(user_id, html.escape(user.first_name))}\n"
+        )
+        return logmsg
+    except Exception as e:
+        update.effective_message.edit_text(str(e))
 
 
 @Mukeshcallback(pattern=r"cb_decline=")
@@ -76,29 +76,29 @@ def approve_joinreq(update: Update, context: CallbackContext) -> str:
 @bot_admin
 @loggable
 def decline_joinreq(update: Update, context: CallbackContext) -> str:
-    bot = context.bot
-    query = update.callback_query
-    user = update.effective_user
-    chat = update.effective_chat
-    match = re.match(r"cb_decline=(.+)", query.data)
+    bot = context.bot
+    query = update.callback_query
+    user = update.effective_user
+    chat = update.effective_chat
+    match = re.match(r"cb_decline=(.+)", query.data)
 
-    user_id = match.group(1)
-    try:
-        bot.decline_chat_join_request(chat.id, user_id)
-        update.effective_message.edit_text(
-            f"ᴊᴏɪɴ ʀᴇǫᴜᴇsᴛ ᴅᴇᴄʟɪɴᴇᴅ ʙʏ {mention_html(user.id, user.first_name)}.",
-            parse_mode="HTML",
-        )
-        logmsg = (
-            f"<b>{html.escape(chat.title)}:</b>\n"
-            f"#𝐉𝐎𝐈𝐍_𝐑𝐄𝐐𝐔𝐄𝐒𝐓\n"
-            f"ᴅᴇᴄʟɪɴᴇᴅ\n"
-            f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-            f"<b>ᴜsᴇʀ:</b> {mention_html(user_id, html.escape(user.first_name))}\n"
-        )
-        return logmsg
-    except Exception as e:
-        update.effective_message.edit_text(str(e))
+    user_id = match.group(1)
+    try:
+        bot.decline_chat_join_request(chat.id, user_id)
+        update.effective_message.edit_text(
+            f"ᴊᴏɪɴ ʀᴇǫᴜᴇsᴛ ᴅᴇᴄʟɪɴᴇᴅ ʙʏ {mention_html(user.id, user.first_name)}.",
+            parse_mode="HTML",
+        )
+        logmsg = (
+            f"<b>{html.escape(chat.title)}:</b>\n"
+            f"#𝐉𝐎𝐈𝐍_𝐑𝐄𝐐𝐔𝐄𝐒𝐓\n"
+            f"ᴅᴇᴄʟɪɴᴇᴅ\n"
+            f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+            f"<b>ᴜsᴇʀ:</b> {mention_html(user_id, html.escape(user.first_name))}\n"
+        )
+        return logmsg
+    except Exception as e:
+        update.effective_message.edit_text(str(e))
 
 
 dispatcher.add_handler(ChatJoinRequestHandler(callback=chat_join_req, run_async=True))
