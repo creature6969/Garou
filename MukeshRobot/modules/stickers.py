@@ -839,13 +839,3 @@ dispatcher.add_handler(STICKERS_HANDLER)
 dispatcher.add_handler(STICKERID_HANDLER)
 dispatcher.add_handler(GETSTICKER_HANDLER)
 dispatcher.add_handler(KANG_HANDLER)
-    
-__mod_name__ = "sғᴡ"
-__help__ = """
-✿ *sᴏᴍᴇ ᴍᴏʀᴇ sᴛɪᴄᴋᴇʀ* ✿
-
-❍ `/stickerid`
-❍ `/getsticker`
-❍ `/kang`
-❍ `/stickers`
-"""
