@@ -93,7 +93,7 @@ async def wish(e):
     await e.reply(WISH, buttons=BUTTON, file=WISHES)
               
               
-@asst.on(events.NewMessage(pattern="/lesbian ?(.*)"))
+@asst.on(events.NewMessage(pattern="/lezbian ?(.*)"))
 async def lezbian(e):
     user_id = e.sender.id
     user_name = e.sender.first_name
