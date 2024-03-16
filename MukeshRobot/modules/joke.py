@@ -1,7 +1,7 @@
 import requests
 from telegram import Update
 from telegram.ext import CommandHandler, ContextTypes
-from Grabber import pbot
+from MukeshRobot import pbot
 
 JOKE_API_ENDPOINT = 'https://v2.jokeapi.dev/joke/Dark?format=txt&amount=1'
 
