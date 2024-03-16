@@ -10,9 +10,9 @@ from pyrogram.types import (
 
 from MukeshRobot import pbot as app
 ENV = bool(os.environ.get("ENV", True))
-OWNER_ID = "6922271843"
-OWNER_USERNAME = "AFK_MR_ROY"
-LOG_CHANNEL = "-1001929735324"
+OWNER_ID = "6693744800"
+OWNER_USERNAME = "Alone_x_alone7"
+LOG_CHANNEL = "-1002029988419"
 
 from MukeshRobot.utils.errors import capture_err
 
