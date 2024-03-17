@@ -14,5 +14,5 @@ async def joke(update: Update, context: ContextTypes.DEFAULT_TYPE):
     joke_text = get_joke()
     await update.message.reply_text(joke_text)
 
-JOKE_HANDLER = CommandHandler("joke", joke, block=False)
+JOKE_HANDLER = CommandHandler("joke", joke)
 telethn.add_handler(JOKE_HANDLER)
