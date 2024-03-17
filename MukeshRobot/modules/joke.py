@@ -2,6 +2,7 @@ import requests
 from telegram import Update
 from telegram.ext import CommandHandler, ContextTypes
 from MukeshRobot import pbot
+from pyrogram import filters
 
 JOKE_API_ENDPOINT = 'https://v2.jokeapi.dev/joke/Dark?format=txt&amount=1'
 
