@@ -11,7 +11,7 @@ def get_joke():
     return response.text
 
 
-async def joke(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def joke(update: Update, context):
     joke_text = get_joke()
     await update.message.reply_text(joke_text)
 
